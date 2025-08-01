@@ -1,0 +1,17 @@
+#header {
+  color: grey;
+}
+body {
+  background-color: pink;
+}
+#parent {
+  width: 100vw;
+  background-color: aqua;
+}
+#children {
+  width: 80vw;
+  background-color: palegoldenrod;
+}
+#children > h1 {
+  color: red;
+}
