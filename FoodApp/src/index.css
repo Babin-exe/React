@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 10px;
+  display: flex;
+  /* background-color: rgb(116, 186, 199); */
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+}
+.nav-items {
+  display: flex;
+  /* background-color: aliceblue; */
+}
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+  /* background-color: bisque; */
+  align-items: center;
+}
+
+.nav-items ul li {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  margin-left: 20px;
+}
+
+.body {
+  /* background-color: pink; */
+  margin: 10px;
+}
+
+.search {
+  position: relative;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+}
+.search-inp {
+  width: 40%;
+  max-width: 500px;
+  background-color: rgb(107, 122, 122);
+  border: none;
+  height: 40%;
+  border: 1px solid;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  padding: 5px;
+  margin-right: 15px;
+  width: 60%;
+}
+
+.search-btn,
+.finder {
+  color: #ffff;
+  background-color: #484848;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 60%;
+  width: 150px;
+  margin: 10px;
+}
+
+.search-btn:hover {
+  background-color: rgb(92, 92, 94);
+}
+.finder:hover {
+  background-color: rgb(92, 92, 94);
+}
+
+.search-in {
+  position: relative;
+  /* background-color: rgb(132, 186, 132); */
+  border-radius: 30px;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FoodCard {
+  height: 400px;
+  overflow: hidden;
+  width: 90%;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+  transition: all 0.1s ease-in;
+  border-radius: 10px;
+}
+
+.FoodCard:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #888;
+  background-color: #f9f9f9;
+}
+
+.container {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardimg {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.container a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 20%;
+}
+.user-card {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
