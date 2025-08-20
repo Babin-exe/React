@@ -1,22 +1,4 @@
-import { useState } from "react";
 
-const User = (props) => {
-  const { name, Location } = props;
-
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(1);
-
-  return (
-    <div className="user-card">
-      <h2>Name : {name}</h2>
-      <h3>Location : {Location}</h3>
-      <h2>Contact : @aaaauuhh</h2>
-    </div>
-  );
-};
-export default User;
-
-//This is what the class based component looks like
 import React from "react";
 export class UserClass extends React.Component {
   constructor(props) {
@@ -44,7 +26,7 @@ export class UserClass extends React.Component {
   }
 
   render() {
-    // console.log("Here runs the render method");
+    console.log("Here runs the render method");
 
     return (
       <div className="user-card">

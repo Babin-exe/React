@@ -3,11 +3,14 @@ import SearchSection from "./SS";
 import FoodCard from "./Foodcard";
 import { restaurantList } from "../utils/constants.jsx";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.jsx";
 
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
 
   const [allRestaurants, setallRestaurants] = useState([]);
+
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,6 +31,13 @@ const Body = () => {
     setRestaurants(allRestaurants);
   };
 
+  if (onlineStatus === false) {
+    return (
+      <h1>
+        looks like you are offline i don't have any fancy stuff to show here
+      </h1>
+    );
+  }
   return (
     <div>
       <div className="body">
