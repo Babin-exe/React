@@ -22,8 +22,11 @@ const Header = () => {
           </li>
 
           <li>
-            {" "}
             <Link to="/ContactUs"> Contact Us</Link>{" "}
+          </li>
+
+          <li>
+            <Link to="/Grocery">Grocery</Link>
           </li>
 
           <li> Cart </li>
