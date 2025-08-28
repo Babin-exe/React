@@ -1,4 +1,36 @@
 @import "tailwindcss";
+/* Shimmer effect */
+.shimmer-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.shimmer-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 
 /* * {
   margin: 0;
@@ -8,14 +40,14 @@
 /* .header {
   margin: 10px;
   display: flex; */
-  /* background-color: rgb(116, 186, 199); */
-  /* align-items: center;
+/* background-color: rgb(116, 186, 199); */
+/* align-items: center;
   justify-content: space-between;
   border: 1px solid;
 } */
 /* .nav-items { */
-  /* display: flex; */
-  /* background-color: aliceblue; */
+/* display: flex; */
+/* background-color: aliceblue; */
 /* } */
 /* .nav-items > ul {
   display: flex;
@@ -25,12 +57,12 @@
   padding: 10px;
   cursor: pointer;
   /* background-color: bisque; */
-  /* align-items: center; */
+/* align-items: center; */
 /* }  */
 
 /* .nav-items ul li { */
-  /* display: flex; */
-  /* align-items: center; */
+/* display: flex; */
+/* align-items: center; */
 /* } */
 
 /* .logo {
@@ -39,8 +71,8 @@
 } */
 
 /* .body { */
-  /* background-color: pink; */
-  /* margin: 10px;
+/* background-color: pink; */
+/* margin: 10px;
 } */
 
 /* .search {
@@ -49,11 +81,11 @@
   display: flex;
   justify-content: center;
   align-items: center; */
-  /* background-color: blue; */
+/* background-color: blue; */
 /* } */
 /* .search-inp {
   width: 40%; */
-  /* max-width: 500px;
+/* max-width: 500px;
   background-color: rgb(107, 122, 122);
   border: none;
   height: 40%;
@@ -88,10 +120,10 @@
 } */
 
 /* .search-in { */
-  /* position: relative; */
-  /* background-color: rgb(132, 186, 132); */
-  /* border-radius: 30px; */
-  /* width: 100vw;
+/* position: relative; */
+/* background-color: rgb(132, 186, 132); */
+/* border-radius: 30px; */
+/* width: 100vw;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -121,8 +153,8 @@
 } */
 
 /* .container { */
-  /* background-color: aquamarine; */
-  /* display: flex;
+/* background-color: aquamarine; */
+/* display: flex;
   flex-wrap: wrap;
 } */
 

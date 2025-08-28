@@ -4,6 +4,7 @@ import FoodCard from "./Foodcard";
 import { restaurantList } from "../utils/constants.jsx";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.jsx";
+import Loading from "./Loading.jsx";
 
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -12,15 +13,23 @@ const Body = () => {
 
   const onlineStatus = useOnlineStatus();
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await restaurantList();
       setRestaurants(data);
       setallRestaurants(data);
+      setLoading(false);
     };
 
     fetchData();
   }, []);
+
+  if (loading) {
+    <SearchSection />;
+    return <Loading />;
+  }
 
   const handleTopRated = () => {
     const topRated = allRestaurants.filter((res) => res.info.avgRating >= 4.7);
