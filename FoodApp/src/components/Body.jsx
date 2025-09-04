@@ -55,7 +55,7 @@ const Body = () => {
           onShowAllClick={handleShowAll}
         />
 
-        <div className="container">
+        <div className=" flex flex-wrap">
           {restaurants.map((restaurant) => {
             const {
               key,
